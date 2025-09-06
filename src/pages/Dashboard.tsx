@@ -109,11 +109,11 @@ const Dashboard = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <Button variant="ghost" size="sm">
+            <Button variant="ghost" size="sm" onClick={() => navigate('/settings')}>
               <Settings className="w-4 h-4 mr-2" />
               Settings
             </Button>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 cursor-pointer" onClick={() => navigate('/profile')}>
               <Avatar className="w-8 h-8">
                 <AvatarImage src={user?.avatar} />
                 <AvatarFallback>{user?.name?.[0]}</AvatarFallback>
